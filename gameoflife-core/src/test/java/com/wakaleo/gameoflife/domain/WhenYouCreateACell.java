@@ -16,6 +16,12 @@ public class WhenYouCreateACell {
     }
 
     @Test
+    public void aLiveCellShouldBeRepresentedByAnAsterisk1() {
+        Cell cell = Cell.fromSymbol("*");
+        assertThat(cell, is(LIVE_CELL));
+    }
+
+    @Test
     public void aDeadCellShouldBeRepresentedByADot() {
         Cell cell = Cell.fromSymbol(".");
         assertThat(cell, is(DEAD_CELL));
